@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.louie.lifecounter.LifeCounterActivity"
+    android:id="@+id/Background"
+    android:padding="0dp">
+
+    <FrameLayout
+        android:id="@+id/rightFragment"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="0dp"
+        android:layout_gravity="left|bottom"
+        android:layout_alignTop="@+id/RPlusOne"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-1"
+            android:id="@+id/RMinusOne"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/RightView"
+            android:layout_alignStart="@+id/RightView"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1"
+            android:id="@+id/RPlusOne"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/RightView"
+            android:layout_alignStart="@+id/RightView"
+            android:layout_gravity="center_horizontal|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:id="@+id/RightView"
+            android:textSize="32sp"
+            android:layout_marginLeft="59dp"
+            android:layout_marginStart="59dp"
+            android:layout_alignTop="@+id/LeftView"
+            android:layout_toRightOf="@+id/leftFragment"
+            android:layout_toEndOf="@+id/leftFragment"
+            android:layout_gravity="left|center_vertical"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/leftFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:padding="0dp"
+        android:layout_toStartOf="@+id/rightFragment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-1"
+            android:id="@+id/LMinusOne"
+            android:layout_alignStart="@+id/RMinusOne"
+            android:layout_alignBottom="@+id/leftFragment"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1"
+            android:id="@+id/LPlusOne"
+            android:layout_alignTop="@+id/RPlusOne"
+            android:layout_alignLeft="@+id/LeftView"
+            android:layout_alignStart="@+id/LeftView"
+            android:layout_gravity="center_horizontal|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:id="@+id/LeftView"
+            android:textSize="32sp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginStart="62dp"
+            android:layout_alignTop="@+id/space"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_gravity="left|center_vertical"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space"/>
+
+
+
+
+
+</RelativeLayout>
